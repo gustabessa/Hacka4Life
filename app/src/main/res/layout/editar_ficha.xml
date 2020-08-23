@@ -1,0 +1,754 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/palha">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frame5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        android:background="@color/palhaDarkAlpha"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/palhaMaisDark"
+            android:progressBackgroundTint="@color/palhaMaisDark"
+            android:textColor="@color/palha"
+            android:text="SALVO COM SUCESSO!"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></TextView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
+
+                <Button
+                    android:id="@+id/button9"
+                    android:layout_width="247dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="30dp"
+                    android:background="@drawable/botao_background"
+                    android:text="REMOVER"
+                    android:textColor="@color/palha"
+                    android:textSize="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/button10" />
+
+                <TextView
+                    android:id="@+id/textView78"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Prioritario:"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="@+id/textView36"
+                    app:layout_constraintTop_toBottomOf="@+id/textView50" />
+
+                <TextView
+                    android:id="@+id/textView79"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="TextView"
+                    android:textSize="18dp"
+                    app:layout_constraintStart_toStartOf="@+id/textView42"
+                    app:layout_constraintTop_toBottomOf="@+id/textView51" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup29"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView63">
+
+                    <RadioButton
+                        android:id="@+id/radioButton46"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="130dp"
+                        android:buttonTint="@color/palhaMaisDark"
+                        android:text="SIM" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton47"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/palhaMaisDark"
+                        android:text="NÃO" />
+                </RadioGroup>
+
+                <EditText
+                    android:id="@+id/editTextTextMultiLine4"
+                    android:layout_width="247dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/custom_viewbox"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:gravity="start|top"
+                    android:hint="Medicamentos Controlados"
+                    android:inputType="textMultiLine"
+                    android:padding="4dp"
+                    android:scrollbars="vertical"
+                    android:textCursorDrawable="@drawable/custom_cursor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/radioGroup29" />
+
+                <EditText
+                    android:id="@+id/editTextTextMultiLine5"
+                    android:layout_width="247dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/custom_viewbox"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:gravity="start|top"
+                    android:hint="Doenças Crônicas"
+                    android:inputType="textMultiLine"
+                    android:padding="4dp"
+                    android:scrollbars="vertical"
+                    android:textCursorDrawable="@drawable/custom_cursor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/radioGroup30" />
+
+                <EditText
+                    android:id="@+id/editTextTextMultiLine6"
+                    android:layout_width="247dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/custom_viewbox"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:gravity="start|top"
+                    android:hint="Alergias a Medicamentos"
+                    android:inputType="textMultiLine"
+                    android:padding="4dp"
+                    android:scrollbars="vertical"
+                    android:textCursorDrawable="@drawable/custom_cursor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/radioGroup31" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup28"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView70">
+
+                    <RadioButton
+                        android:id="@+id/radioButton44"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="130dp"
+                        android:buttonTint="@color/palhaMaisDark"
+                        android:text="SIM" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton45"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/palhaMaisDark"
+                        android:text="NÃO" />
+                </RadioGroup>
+
+                <RadioGroup
+                    android:id="@+id/radioGroup27"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView68">
+
+                    <RadioButton
+                        android:id="@+id/radioButton42"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="130dp"
+                        android:buttonTint="@color/palhaMaisDark"
+                        android:text="SIM" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton43"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/palhaMaisDark"
+                        android:text="NÃO" />
+                </RadioGroup>
+
+                <RadioGroup
+                    android:id="@+id/radioGroup26"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView47">
+
+                    <RadioButton
+                        android:id="@+id/radioButton40"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="130dp"
+                        android:buttonTint="@color/palhaMaisDark"
+                        android:text="SIM" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton41"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/palhaMaisDark"
+                        android:text="NÃO" />
+                </RadioGroup>
+
+                <RadioGroup
+                    android:id="@+id/radioGroup25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView66">
+
+                    <RadioButton
+                        android:id="@+id/radioButton38"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="130dp"
+                        android:buttonTint="@color/palhaMaisDark"
+                        android:text="SIM" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton39"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/palhaMaisDark"
+                        android:text="NÃO" />
+                </RadioGroup>
+
+                <RadioGroup
+                    android:id="@+id/radioGroup30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView64">
+
+                    <RadioButton
+                        android:id="@+id/radioButton48"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="130dp"
+                        android:buttonTint="@color/palhaMaisDark"
+                        android:text="SIM" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton49"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/palhaMaisDark"
+                        android:text="NÃO" />
+                </RadioGroup>
+
+                <RadioGroup
+                    android:id="@+id/radioGroup31"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView58">
+
+                    <RadioButton
+                        android:id="@+id/radioButton50"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="130dp"
+                        android:buttonTint="@color/palhaMaisDark"
+                        android:text="SIM" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton51"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/palhaMaisDark"
+                        android:text="NÃO" />
+                </RadioGroup>
+
+
+                <RadioGroup
+                    android:id="@+id/radioGroup24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView60">
+
+                    <RadioButton
+                        android:id="@+id/radioButton36"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="130dp"
+                        android:buttonTint="@color/palhaMaisDark"
+                        android:text="SIM" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton37"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/palhaMaisDark"
+                        android:text="NÃO" />
+                </RadioGroup>
+
+                <RadioGroup
+                    android:id="@+id/radioGroup22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView54">
+
+                    <RadioButton
+                        android:id="@+id/radioButton32"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="130dp"
+                        android:buttonTint="@color/palhaMaisDark"
+                        android:text="SIM" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton33"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/palhaMaisDark"
+                        android:text="NÃO" />
+                </RadioGroup>
+
+                <RadioGroup
+                    android:id="@+id/radioGroup21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView52">
+
+                    <RadioButton
+                        android:id="@+id/radioButton30"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="130dp"
+                        android:buttonTint="@color/palhaMaisDark"
+                        android:text="SIM" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton31"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/palhaMaisDark"
+                        android:text="NÃO" />
+                </RadioGroup>
+
+                <RadioGroup
+                    android:id="@+id/radioGroup20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView45">
+
+                    <RadioButton
+                        android:id="@+id/radioButton29"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="130dp"
+                        android:buttonTint="@color/palhaMaisDark"
+                        android:text="SIM" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton28"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/palhaMaisDark"
+                        android:text="NÃO" />
+                </RadioGroup>
+
+                <Button
+                    android:id="@+id/button10"
+                    android:layout_width="247dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="30dp"
+                    android:background="@drawable/botao_background"
+                    android:text="SALVAR"
+                    android:textColor="@color/palha"
+                    android:textSize="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine6" />
+
+                <TextView
+                    android:id="@+id/textView70"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Falta de Ar:"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="@+id/radioGroup27"
+                    app:layout_constraintTop_toBottomOf="@+id/radioGroup27" />
+
+                <TextView
+                    android:id="@+id/textView66"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tosse:"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="@+id/radioGroup24"
+                    app:layout_constraintTop_toBottomOf="@+id/radioGroup24" />
+
+                <TextView
+                    android:id="@+id/textView47"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dor no Corpo:"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="@+id/radioGroup25"
+                    app:layout_constraintTop_toBottomOf="@+id/radioGroup25" />
+
+                <TextView
+                    android:id="@+id/textView68"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Coriza:"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="@+id/radioGroup26"
+                    app:layout_constraintTop_toBottomOf="@+id/radioGroup26" />
+
+                <TextView
+                    android:id="@+id/textView64"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Doença Crônica:"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="@+id/editTextTextMultiLine4"
+                    app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine4" />
+
+                <TextView
+                    android:id="@+id/textView63"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Med. Controlada:"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="@+id/radioGroup28"
+                    app:layout_constraintTop_toBottomOf="@+id/radioGroup28" />
+
+                <TextView
+                    android:id="@+id/textView60"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Diabetes:"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="@+id/radioGroup23"
+                    app:layout_constraintTop_toBottomOf="@+id/radioGroup23" />
+
+                <TextView
+                    android:id="@+id/textView58"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Alergia a Med.:"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="@id/radioGroup29"
+                    app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine5" />
+
+                <TextView
+                    android:id="@+id/textView56"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Alergia:"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="@+id/textView54"
+                    app:layout_constraintTop_toBottomOf="@+id/radioGroup22" />
+
+                <TextView
+                    android:id="@+id/textView54"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Diarréia:"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="@+id/radioGroup21"
+                    app:layout_constraintTop_toBottomOf="@+id/radioGroup21" />
+
+                <TextView
+                    android:id="@+id/textView52"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Náusea:"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName7"
+                    app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName7" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView56">
+
+                    <RadioButton
+                        android:id="@+id/radioButton34"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="130dp"
+                        android:buttonTint="@color/palhaMaisDark"
+                        android:text="SIM" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton35"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/palhaMaisDark"
+                        android:text="NÃO" />
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/textView50"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Cartão SUS:"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="@+id/textView36"
+                    app:layout_constraintTop_toBottomOf="@+id/textView39" />
+
+                <TextView
+                    android:id="@+id/textView51"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="TextView"
+                    android:textSize="18dp"
+                    app:layout_constraintStart_toStartOf="@+id/textView42"
+                    app:layout_constraintTop_toBottomOf="@+id/textView42" />
+
+                <TextView
+                    android:id="@+id/textView44"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Sintomas"
+                    android:textSize="35sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+                <TextView
+                    android:id="@+id/textView25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text="Dados Paciente"
+                    android:textSize="35sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView36"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginTop="30dp"
+                    android:text="Nome:"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView25" />
+
+                <TextView
+                    android:id="@+id/textView38"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Faixa Etária:"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="@+id/textView36"
+                    app:layout_constraintTop_toBottomOf="@+id/textView36" />
+
+                <TextView
+                    android:id="@+id/textView39"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="CPF:"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="@+id/textView36"
+                    app:layout_constraintTop_toBottomOf="@+id/textView38" />
+
+                <!--                <TextView-->
+                <!--                    android:id="@+id/textView40"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginTop="15dp"-->
+                <!--                    android:text="Genero:"-->
+                <!--                    android:textSize="18sp"-->
+                <!--                    app:layout_constraintEnd_toEndOf="@+id/textView36"-->
+                <!--                    app:layout_constraintTop_toBottomOf="@+id/textView50" />-->
+
+                <TextView
+                    android:id="@+id/textView37"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="30dp"
+                    android:text="TextView"
+                    android:textSize="18dp"
+                    app:layout_constraintStart_toEndOf="@+id/textView36"
+                    app:layout_constraintTop_toBottomOf="@+id/textView25" />
+
+                <TextView
+                    android:id="@+id/textView41"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="TextView"
+                    android:textSize="18dp"
+                    app:layout_constraintStart_toEndOf="@+id/textView38"
+                    app:layout_constraintTop_toBottomOf="@+id/textView37" />
+
+                <TextView
+                    android:id="@+id/textView42"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="TextView"
+                    android:textSize="18dp"
+                    app:layout_constraintStart_toEndOf="@+id/textView39"
+                    app:layout_constraintTop_toBottomOf="@+id/textView41" />
+
+                <!--                <TextView-->
+                <!--                    android:id="@+id/textView43"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginTop="15dp"-->
+                <!--                    android:text="TextView"-->
+                <!--                    android:textSize="18dp"-->
+                <!--                    app:layout_constraintStart_toStartOf="@+id/textView51"-->
+                <!--                    app:layout_constraintTop_toBottomOf="@+id/textView51" />-->
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="404dp"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="30dp"
+                    android:background="?android:attr/listDivider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView79" />
+
+                <TextView
+                    android:id="@+id/textView45"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text="Febre:"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="@+id/radioGroup20"
+                    app:layout_constraintTop_toBottomOf="@+id/textView44" />
+
+                <TextView
+                    android:id="@+id/textView40"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Temperatura:"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="@+id/radioGroup20"
+                    app:layout_constraintTop_toBottomOf="@+id/radioGroup20" />
+
+                <TextView
+                    android:id="@+id/textView43"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Glicemia:"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="@+id/radioGroup20"
+                    app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName5" />
+
+                <TextView
+                    android:id="@+id/textView49"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pressão Arterial:"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="@+id/radioGroup20"
+                    app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName6" />
+
+                <EditText
+                    android:id="@+id/editTextTextPersonName5"
+                    android:layout_width="247dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    app:layout_constraintStart_toStartOf="@+id/textView40"
+                    app:layout_constraintTop_toBottomOf="@+id/textView40" />
+
+                <EditText
+                    android:id="@+id/editTextTextPersonName6"
+                    android:layout_width="247dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    app:layout_constraintStart_toStartOf="@+id/textView40"
+                    app:layout_constraintTop_toBottomOf="@+id/textView43" />
+
+                <EditText
+                    android:id="@+id/editTextTextPersonName7"
+                    android:layout_width="247dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    app:layout_constraintStart_toStartOf="@+id/textView40"
+                    app:layout_constraintTop_toBottomOf="@+id/textView49" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

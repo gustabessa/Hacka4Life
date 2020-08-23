@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/palha">
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/palha">
+
+                <RadioGroup
+                    android:id="@+id/radioGroup40"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="@+id/textView60"
+                    app:layout_constraintTop_toBottomOf="@+id/textView74">
+
+                    <RadioButton
+                        android:id="@+id/radioButton62"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="130dp"
+                        android:buttonTint="@color/palhaMaisDark"
+                        android:text="SIM" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton63"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/palhaMaisDark"
+                        android:text="NAO" />
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/textView74"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="É GESTANTE OU DEFICIENTE?"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="@+id/textView60"
+                    app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="44dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <RadioButton
+                        android:id="@+id/radioButton2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:buttonTint="@color/palhaMaisDark"
+                        android:text="CRIANÇA" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:buttonTint="@color/palhaMaisDark"
+                        android:text="ADULTO" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/palhaMaisDark"
+                        android:text="IDOSO" />
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="ESTÁ COM FEBRE/FEBRIL?"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="@+id/textView60"
+                    app:layout_constraintTop_toBottomOf="@+id/radioGroup40" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="@+id/textView60"
+                    app:layout_constraintTop_toBottomOf="@+id/textView5">
+
+                    <RadioButton
+                        android:id="@+id/radioButton5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="130dp"
+                        android:buttonTint="@color/palhaMaisDark"
+                        android:text="SIM" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/palhaMaisDark"
+                        android:text="NAO" />
+
+                </RadioGroup>
+                <!--    -->
+
+                <TextView
+                    android:id="@+id/textView60"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="ESTÁ COM TOSSE?"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="@+id/radioGroup10"
+                    app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="@+id/textView61"
+                    app:layout_constraintTop_toBottomOf="@+id/textView60">
+
+                    <RadioButton
+                        android:id="@+id/radioButton20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="130dp"
+                        android:buttonTint="@color/palhaMaisDark"
+                        android:text="SIM" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton21"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/palhaMaisDark"
+                        android:text="NAO" />
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/textView61"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="ESTÁ COM CORIZA?"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="@+id/radioGroup11"
+                    app:layout_constraintTop_toBottomOf="@+id/radioGroup10" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="@+id/textView62"
+                    app:layout_constraintTop_toBottomOf="@+id/textView61">
+
+                    <RadioButton
+                        android:id="@+id/radioButton22"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="130dp"
+                        android:buttonTint="@color/palhaMaisDark"
+                        android:text="SIM" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton23"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/palhaMaisDark"
+                        android:text="NAO" />
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/textView62"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="ESTÁ COM DORES NO CORPO?"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="@+id/radioGroup12"
+                    app:layout_constraintTop_toBottomOf="@+id/radioGroup11" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="@+id/textView63"
+                    app:layout_constraintTop_toBottomOf="@+id/textView62">
+
+                    <RadioButton
+                        android:id="@+id/radioButton24"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="130dp"
+                        android:buttonTint="@color/palhaMaisDark"
+                        android:text="SIM" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton25"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/palhaMaisDark"
+                        android:text="NAO" />
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/textView63"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="ESTÁ COM FALTA DE AR?"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="@+id/radioGroup13"
+                    app:layout_constraintTop_toBottomOf="@+id/radioGroup12" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="@+id/textView6"
+                    app:layout_constraintTop_toBottomOf="@+id/textView63">
+
+                    <RadioButton
+                        android:id="@+id/radioButton26"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="130dp"
+                        android:buttonTint="@color/palhaMaisDark"
+                        android:text="SIM" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton27"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/palhaMaisDark"
+                        android:text="NAO" />
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="SENTIU ÂNSIA DE VÔMITO?"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="@+id/radioGroup3"
+                    app:layout_constraintTop_toBottomOf="@+id/radioGroup13" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="@+id/textView7"
+                    app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+                    <RadioButton
+                        android:id="@+id/radioButton7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="130dp"
+                        android:buttonTint="@color/palhaMaisDark"
+                        android:text="SIM" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/palhaMaisDark"
+                        android:text="NAO" />
+                </RadioGroup>
+                <!--    -->
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="TEVE DIARRÉIA?"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="@+id/radioGroup4"
+                    app:layout_constraintTop_toBottomOf="@+id/radioGroup3" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="@+id/textView8"
+                    app:layout_constraintTop_toBottomOf="@+id/textView7">
+
+                    <RadioButton
+                        android:id="@+id/radioButton9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="130dp"
+                        android:buttonTint="@color/palhaMaisDark"
+                        android:text="SIM" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/palhaMaisDark"
+                        android:text="NAO" />
+                </RadioGroup>
+                <!--    -->
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="TEM ALERGIA?"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="@+id/radioGroup5"
+                    app:layout_constraintTop_toBottomOf="@+id/radioGroup4" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="@+id/textView9"
+                    app:layout_constraintTop_toBottomOf="@+id/textView8">
+
+                    <RadioButton
+                        android:id="@+id/radioButton11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="130dp"
+                        android:buttonTint="@color/palhaMaisDark"
+                        android:text="SIM" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/palhaMaisDark"
+                        android:text="NAO" />
+                </RadioGroup>
+                <!--    -->
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="TEM DIABETES?"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="@+id/radioGroup6"
+                    app:layout_constraintTop_toBottomOf="@+id/radioGroup5" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="@+id/radioGroup7"
+                    app:layout_constraintTop_toBottomOf="@+id/textView9">
+
+                    <RadioButton
+                        android:id="@+id/radioButton12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="130dp"
+                        android:buttonTint="@color/palhaMaisDark"
+                        android:text="SIM" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/palhaMaisDark"
+                        android:text="NAO" />
+                </RadioGroup>
+                <!--    -->
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:maxWidth="300dp"
+                    android:text="TEM ALERGIA MEDICAMENTOS?"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="@+id/radioGroup7"
+                    app:layout_constraintTop_toBottomOf="@+id/radioGroup6" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="@+id/editTextTextMultiLine"
+                    app:layout_constraintTop_toBottomOf="@+id/textView10">
+
+                    <RadioButton
+                        android:id="@+id/radioButton14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="130dp"
+                        android:buttonTint="@color/palhaMaisDark"
+                        android:text="SIM" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/palhaMaisDark"
+                        android:text="NAO" />
+                </RadioGroup>
+                <!--    -->
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:maxWidth="300dp"
+                    android:text="SE SIM, QUAIS?"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="@+id/editTextTextMultiLine"
+                    app:layout_constraintTop_toBottomOf="@+id/radioGroup7" />
+
+                <EditText
+                    android:id="@+id/editTextTextMultiLine"
+                    android:layout_width="300dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/custom_viewbox"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:gravity="start|top"
+                    android:hint="Alergias a Medicamentos"
+                    android:inputType="textMultiLine"
+                    android:padding="4dp"
+                    android:scrollbars="vertical"
+                    android:textCursorDrawable="@drawable/custom_cursor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView11" />
+                <!--    -->
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:maxWidth="300dp"
+                    android:text="USA REMÉDIOS CONTROLADOS?"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="@+id/radioGroup8"
+                    app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="@+id/editTextTextMultiLine2"
+                    app:layout_constraintTop_toBottomOf="@+id/textView12">
+
+                    <RadioButton
+                        android:id="@+id/radioButton16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="130dp"
+                        android:buttonTint="@color/palhaMaisDark"
+                        android:text="SIM" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/palhaMaisDark"
+                        android:text="NAO" />
+                </RadioGroup>
+                <!--    -->
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:maxWidth="300dp"
+                    android:text="SE SIM, QUAIS?"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="@+id/editTextTextMultiLine2"
+                    app:layout_constraintTop_toBottomOf="@+id/radioGroup8" />
+
+                <EditText
+                    android:id="@+id/editTextTextMultiLine2"
+                    android:layout_width="300dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/custom_viewbox"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:gravity="start|top"
+                    android:hint="Remédios Controlados"
+                    android:inputType="textMultiLine"
+                    android:padding="4dp"
+                    android:scrollbars="vertical"
+                    android:textCursorDrawable="@drawable/custom_cursor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+                <!--    -->
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:maxWidth="300dp"
+                    android:text="TEM DOENÇAS CRÔNICAS?"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="@+id/radioGroup9"
+                    app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine2" />
+
+                <!--    -->
+                <RadioGroup
+                    android:id="@+id/radioGroup9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="@+id/editTextTextMultiLine3"
+                    app:layout_constraintTop_toBottomOf="@+id/textView14">
+
+                    <RadioButton
+                        android:id="@+id/radioButton18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="130dp"
+                        android:buttonTint="@color/palhaMaisDark"
+                        android:text="SIM" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton19"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/palhaMaisDark"
+                        android:text="NAO" />
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:maxWidth="300dp"
+                    android:text="SE SIM, QUAIS?"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="@+id/editTextTextMultiLine3"
+                    app:layout_constraintTop_toBottomOf="@+id/radioGroup9" />
+
+                <EditText
+                    android:id="@+id/editTextTextMultiLine3"
+                    android:layout_width="300dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/custom_viewbox"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:gravity="start|top"
+                    android:hint="Doenças Crônicas"
+                    android:inputType="textMultiLine"
+                    android:padding="4dp"
+                    android:scrollbars="vertical"
+                    android:textCursorDrawable="@drawable/custom_cursor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+
+                <Button
+                    android:id="@+id/button4"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="50dp"
+                    android:ems="15"
+                    android:textColor="@color/palha"
+                    android:textSize="20dp"
+                    android:background="@drawable/custom_button"
+                    android:layout_marginTop="20dp"
+                    android:text="Enviar"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine3" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

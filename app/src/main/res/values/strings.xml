@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">HackaForLife</string>
+    <string name="TEMPO_ESTIMADO">ESTIMA-SE 30 MINUTOS EM MÉDIA PARA CADA ATENDIMENTO,
+        PODENDO VARIAR PARA MAIS OU MENOS.
+        CHEGUE COM 30 MINUTOS DE ANTECEDÊNCIA NA UNIDADE DE SAÚDE!</string>
+    <string name="sua_vez"><u>CHEGOU A SUA VEZ</u></string>
+    <string name="ANTECAO"><u>ATENÇÃO: SEUS DADOS SERÃO CONFERIDOS AO CHEGAR NA UNIDADE DE SAÚDE.
+        SE HOUVER ALGUMA INCONSISTÊNCIA, VOCÊ VOLTARÁ PARA O FINAL DA FILA DE TRIAGEM.</u></string>
+</resources>
