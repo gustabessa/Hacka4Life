@@ -1,6 +1,7 @@
 package com.example.hackaforlife.views;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.IntentCompat;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -74,7 +75,7 @@ public class SuaVezActivity extends AppCompatActivity {
     public void onBackPressed(){
         super.onBackPressed();
         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
         finish();
     }

@@ -1,5 +1,6 @@
 package com.example.hackaforlife.views;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -31,12 +32,16 @@ public class FilaVirtualActivity extends AppCompatActivity {
     private String cpfPaciente;
     private List<FichaCadastro> fichasFila;
     private int tempoAnterior;
+    private ValueEventListener listener = null;
     private boolean primeiroTempo;
-    private boolean ocupado = false;
+    private boolean found = false;
+    private Query buscaFila;
+    int tempoEstimado = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fila_virtual);
+
         final View mainView = findViewById(R.id.frame8);
         final View notifyView = findViewById(R.id.frame9);
         primeiroTempo = true;
@@ -48,23 +53,23 @@ public class FilaVirtualActivity extends AppCompatActivity {
         }
 
         final TextView mTextField = (TextView) findViewById(R.id.textView17);
-        DatabaseReference filaDatabase = mDatabase.getInstance().getReference();
-        Query buscaFila = filaDatabase.child("PostosSaude/" + nomeUnidadeSaude + "/forms");
-        buscaFila.addValueEventListener(new ValueEventListener() {
+        final DatabaseReference filaDatabase = mDatabase.getInstance().getReference();
+        buscaFila = filaDatabase.child("PostosSaude/" + nomeUnidadeSaude + "/forms");
+        listener = new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                    ocupado = true;
-                    fichasFila = new ArrayList<>();
-                    if (dataSnapshot.exists()) {
-                        for(DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                            FichaCadastro fichaCadastro = new FichaCadastro();
-                            HashMap formMap = (HashMap) snapshot.getValue();
-                            fichaCadastro.setPesoForm((Long) formMap.get("pesoForm"));
-                            fichaCadastro.setCpfPaciente(snapshot.getKey());
-                            fichasFila.add(fichaCadastro);
+                found = false;
+                fichasFila = new ArrayList<>();
+                if (dataSnapshot.exists()) {
+                    for(DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                        FichaCadastro fichaCadastro = new FichaCadastro();
+                        HashMap formMap = (HashMap) snapshot.getValue();
+                        fichaCadastro.setPesoForm((Long) formMap.get("pesoForm"));
+                        fichaCadastro.setCpfPaciente(snapshot.getKey());
+                        fichasFila.add(fichaCadastro);
 
-                        }
                     }
+                }
                 final Handler handler = new Handler();
                 final int delay = 500; //milliseconds
                 final View semFichasView = findViewById(R.id.frame7);
@@ -85,16 +90,19 @@ public class FilaVirtualActivity extends AppCompatActivity {
                                 if(!f.getCpfPaciente().equals(cpfPaciente)) {
                                     tempoEstimado += 30;
                                 }
-                                else break;
+                                else  {
+                                    found = true;
+                                    break;
+                                }
                             }
                             if(tempoEstimado <= 30) {
                                 Intent i = new Intent(FilaVirtualActivity.this, SuaVezActivity.class);
-                                System.out.println(cpfPaciente +  " "  + tempoEstimado);
                                 i.putExtra("nomeUnidadeSaude", nomeUnidadeSaude);
+                                buscaFila.removeEventListener(listener);
                                 startActivity(i);
                                 finish();
                             } else {
-                                if(tempoEstimado >= 60) {
+                                if(tempoEstimado >= 60 && found) {
                                     if(tempoEstimado % 60 == 0) {
                                         mTextField.setText(String.valueOf(tempoEstimado / 60) + " hora(s).");
                                     } else {
@@ -106,7 +114,7 @@ public class FilaVirtualActivity extends AppCompatActivity {
                                                 + String.valueOf(minsEstimados) + " minutos.");
                                     }
                                 } else {
-                                    mTextField.setText(String.valueOf(tempoEstimado) + " minutos.");
+                                    mTextField.setText("Você foi removido.");
                                 }
                             }
                             if(primeiroTempo) {
@@ -128,7 +136,7 @@ public class FilaVirtualActivity extends AppCompatActivity {
                         }
                     }
                 }, delay);
-                }
+            }
 
 
 
@@ -136,7 +144,8 @@ public class FilaVirtualActivity extends AppCompatActivity {
             public void onCancelled(DatabaseError databaseError) {
                 System.out.println("Erro no banco...");
             }
-        });
+        };
+        buscaFila.addValueEventListener(listener);
 
 
     }
@@ -144,7 +153,9 @@ public class FilaVirtualActivity extends AppCompatActivity {
     public void onBackPressed(){
         super.onBackPressed();
         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+        buscaFila.removeEventListener(listener);
         startActivity(intent);
+        finish();
     }
 }
